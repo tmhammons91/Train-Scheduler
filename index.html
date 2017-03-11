@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Trains</title>
+    <!-- Bootstrap -->
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css"
+    <!-- LINK TO FIREBASE GOES HERE -->
+
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <br>
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1 class="text-center">All Aboard!</h1>
+      </div>
+
+      <div class="row">
+
+        <!-- Train Add Panel-->
+        <div class="col-lg-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Add a Train Schedule</h3>
+            </div>
+
+            <div class="panel-body">
+
+              <form role="form">
+                <div class="form-group">
+                  <label for="train-input">Train Name:</label>
+                  <input class="form-control" id="train-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="destination-input">Destination:</label>
+                  <input class="form-control" id="destination-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="firstTime-input">First Train Time(HH:mm - use "military" time):</label>
+                  <input class="form-control" id="firstTime-input" type="text">
+                </div>
+                <div class="form-group">
+                 <label for="frequency-input">Frequency (min): </label>
+                 <input class="form-control" id="frequency-input" type="number">
+                 </div>
+                <button class="btn btn-default" id="add-train" type="submit">Submit</button>
+              </form>
+
+            </div> <!--end of panel-body group-->
+          </div> <!--end of panel default-->
+        </div> <!--end of col-lg6-->
+       
+        <!-- Disply of Trains -->
+        <div class="col-lg-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">All Trains</h3></div>
+            <div class="panel-body">
+                <div id="full-train-list"> </div>
+            </div> <!--end of panel heading -->
+        </div><!--end of panel-default -->
+      </div> <!--end of col-lg-8 -->
+
+    </div> <!--end of row-->
+
+    <!-- jQuery -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="trains.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
